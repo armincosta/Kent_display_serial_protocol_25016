@@ -31,7 +31,7 @@ using System.Drawing;
 
 namespace SerialTest 
 {
-	public class DisplayProtocol
+	public class KentDisplayProtocol
 	{
 		protected static int  MAX_PACKET_SIZE = 10024;
 		public byte[] RX_BUFFER = new byte[MAX_PACKET_SIZE];
@@ -45,12 +45,12 @@ namespace SerialTest
 		static DataPacket pPacket = null;
 		Port portOpened;
 
-		public DisplayProtocol(ref Port pPort)
+		public KentDisplayProtocol(ref Port pPort)
 		{
 			portOpened = pPort;
 		}
 
-		~DisplayProtocol()
+		~KentDisplayProtocol()
 		{
 			pPacket = null;
 		}
@@ -465,10 +465,5 @@ namespace SerialTest
 			return true;
 		}
 	}
-
-	
-
-
-
 }
 
